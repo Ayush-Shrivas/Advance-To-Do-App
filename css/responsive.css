@@ -1,0 +1,41 @@
+@media (max-width: 600px) {
+    .header-copy h1 {
+        font-size: 1.55rem;
+    }
+
+    .hero-panel {
+        padding: 1.5rem;
+    }
+
+    .hero-panel h2 {
+        font-size: 2rem;
+    }
+
+    .task-form-controls {
+        flex-direction: column;
+    }
+    
+    .filters {
+        flex-direction: column;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .filter-btn, .filter-group select {
+        flex: 1;
+        text-align: center;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 0.5rem;
+    }
+}

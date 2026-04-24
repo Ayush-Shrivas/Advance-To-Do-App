@@ -1,0 +1,106 @@
+.waves-backdrop {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+        radial-gradient(circle at top left, var(--hero-glow), transparent 35%),
+        linear-gradient(180deg, color-mix(in srgb, var(--bg-color) 84%, transparent), var(--bg-color));
+}
+
+.interactive-waves {
+    position: absolute;
+    inset: 0;
+}
+
+.app-header {
+    background-color: var(--header-overlay);
+    box-shadow: var(--shadow-sm);
+    padding: 1rem 0;
+    transition: background-color var(--transition-speed);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--hero-border);
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-copy h1 {
+    font-size: 1.9rem;
+    letter-spacing: -0.04em;
+}
+
+.eyebrow {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.app-main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-panel {
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    background:
+        linear-gradient(135deg, color-mix(in srgb, var(--surface-color) 80%, transparent), color-mix(in srgb, var(--bg-color) 82%, transparent)),
+        radial-gradient(circle at top right, var(--hero-glow), transparent 42%);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--hero-border);
+    backdrop-filter: blur(22px);
+}
+
+.hero-content {
+    max-width: 36rem;
+}
+
+.hero-kicker {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.78rem;
+    margin-bottom: 0.85rem;
+}
+
+.hero-panel h2 {
+    font-size: clamp(2rem, 5vw, 3.35rem);
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+}
+
+.hero-description {
+    margin-top: 1rem;
+    color: var(--text-muted);
+    max-width: 34rem;
+}
+
+.task-input-section,
+.task-controls {
+    background-color: var(--panel-overlay);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    transition: background-color var(--transition-speed);
+    backdrop-filter: blur(18px);
+    border: 1px solid var(--hero-border);
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced To-Do App</title>
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="waves-backdrop" aria-hidden="true">
+        <div id="interactive-waves" class="interactive-waves"></div>
+    </div>
+    <header class="app-header">
+        <div class="header-content">
+            <div class="header-copy">
+                <p class="eyebrow">Advanced To-Do</p>
+                <h1>Tasks</h1>
+            </div>
+            <button id="theme-toggle" class="btn btn-icon" aria-label="Toggle Theme">
+                <span class="icon">🌓</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <section class="hero-panel">
+            <div class="hero-content">
+                <p class="hero-kicker">Stay in flow</p>
+                <h2>Organize the day with a calmer, more focused workspace.</h2>
+                <p class="hero-description">
+                    Track priorities, filter faster, and let the interface stay out of the way while the motion adds a subtle sense of depth.
+                </p>
+            </div>
+        </section>
+
+        <section class="task-input-section">
+            <form id="task-form" class="task-form">
+                <input type="text" id="task-title" placeholder="What needs to be done?" required autocomplete="off">
+                <div class="task-form-controls">
+                    <select id="task-priority" title="Priority">
+                        <option value="low">Low Priority</option>
+                        <option value="medium" selected>Medium Priority</option>
+                        <option value="high">High Priority</option>
+                    </select>
+                    <input type="text" id="task-category" placeholder="Category (e.g., Work)" autocomplete="off">
+                    <button type="submit" class="btn btn-primary">Add Task</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="task-controls">
+            <div class="search-box">
+                <input type="text" id="task-search" placeholder="Search tasks...">
+            </div>
+            
+            <div class="filters">
+                <div class="filter-group" id="status-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="pending">Pending</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                <div class="filter-group">
+                    <select id="priority-filter" title="Filter by Priority">
+                        <option value="all">All Priorities</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select id="category-filter" title="Filter by Category">
+                        <option value="all">All Categories</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="task-list-section">
+            <ul id="task-list" class="task-list">
+                <!-- Tasks will be rendered here by JS -->
+            </ul>
+            <div id="empty-state" class="empty-state hidden">
+                <p>No tasks found.</p>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
